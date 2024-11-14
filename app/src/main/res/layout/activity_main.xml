@@ -8,10 +8,6 @@
     tools:context=".MainActivity"
     android:background="#0D47A1">
 
-    <!-- Título -->
-
-    <!-- Semáforo - Três quadrados -->
-
     <View
         android:id="@+id/light_yellow"
         android:layout_width="60dp"
@@ -21,7 +17,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/light_green" />
+        app:layout_constraintTop_toBottomOf="@id/light_green"
+    />
 
     <TextView
         android:id="@+id/title"
@@ -34,7 +31,8 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+    />
 
     <TextView
         android:id="@+id/message"
@@ -46,7 +44,8 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/light_red" />
+        app:layout_constraintTop_toBottomOf="@id/light_red"
+    />
 
     <View
         android:id="@+id/light_green"
@@ -57,11 +56,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title" />
-
-    <!-- Mensagem -->
-
-    <!-- Botão START -->
+        app:layout_constraintTop_toBottomOf="@id/title"
+    />
 
     <View
         android:id="@+id/light_red"
@@ -72,7 +68,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/light_yellow" />
+        app:layout_constraintTop_toBottomOf="@id/light_yellow"
+    />
 
     <Button
         android:id="@+id/start_button"
@@ -85,6 +82,7 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+    />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
