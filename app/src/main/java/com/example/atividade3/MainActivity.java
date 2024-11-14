@@ -6,16 +6,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity
 {
     private View lightGreen, lightYellow, lightRed;
     private TextView message;
+    private Button startButton;
     private final Handler handler = new Handler();
     private Runnable runnable;
     private int state = 0;
@@ -30,13 +27,15 @@ public class MainActivity extends AppCompatActivity
         lightYellow = findViewById(R.id.light_yellow);
         lightRed = findViewById(R.id.light_red);
         message = findViewById(R.id.message);
-        Button startButton = findViewById(R.id.start_button);
+        startButton = findViewById(R.id.start_button);
 
         startButton.setOnClickListener(v -> startSemaphore());
     }
 
     private void startSemaphore()
     {
+        startButton.setEnabled(false);
+
         runnable = new Runnable()
         {
             @Override
@@ -64,7 +63,7 @@ public class MainActivity extends AppCompatActivity
                         state = 0;
                         break;
                 }
-            handler.postDelayed(this, 3000);
+                handler.postDelayed(this, 3000);
             }
         };
         handler.post(runnable);
